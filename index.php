@@ -1,3 +1,5 @@
+<?php require "content/auth/authorization.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -263,7 +265,9 @@
             }
 
             break;
-        
+        case 'logout':
+            echo "<script>window.location.href = 'content/auth/logout.php' </script>";
+            break;
         default:
             include 'content/dashboard.php';
             break;
@@ -271,7 +275,6 @@
     ?>
   </div>
   <!-- /.content-wrapper -->
-
   <footer class="main-footer">
     
     <strong>Copyright &copy; 2021 <a href="#">Minarti, S.Pd.</a></strong> All rights reserved.
