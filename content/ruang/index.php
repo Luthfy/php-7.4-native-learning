@@ -25,7 +25,8 @@
           <h3 class="card-title">Daftar Ruang</h3> <!--Tambahkan daftar barang -->
             <div class="card-tools">
               <div class="btn btn-tool">
-                <a href="index.php?page=ruang&task=insert">Ruang Barang</a> <!--Tambahkan href -->
+                <a href="pdf/ruang.php" class="btn btn-warning btn-sm mx-1">Cetak Daftar Ruang</a> <!--Tambahkan href -->
+                <a href="index.php?page=ruang&task=insert" class="btn btn-primary btn-sm mx-1">Ruang Barang</a> <!--Tambahkan href -->
               </div>
             </div>
         </div>

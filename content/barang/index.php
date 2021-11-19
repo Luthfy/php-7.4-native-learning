@@ -25,7 +25,8 @@
           <h3 class="card-title">Daftar Barang</h3> <!--Tambahkan daftar barang -->
             <div class="card-tools">
               <div class="btn btn-tool">
-                <a href="index.php?page=barang&task=insert">Tambah Barang</a> <!--Tambahkan href -->
+                <a href="pdf/barang.php" class="btn btn-warning btn-sm mx-2">Cetak Daftar Barang</a> <!--Tambahkan href -->
+                <a href="index.php?page=barang&task=insert" class="btn btn-primary btn-sm mx-1">Tambah Barang</a> <!--Tambahkan href -->
               </div>
             </div>
         </div>

@@ -25,7 +25,7 @@
           <h3 class="card-title">Daftar User</h3> <!--Tambahkan daftar barang -->
             <div class="card-tools">
               <div class="btn btn-tool">
-                <a href="index.php?page=user&task=insert">Tambah User</a> <!--Tambahkan href -->
+                <a href="index.php?page=user&task=insert" class="btn btn-primary btn-sm mx-1">Tambah User</a> <!--Tambahkan href -->
               </div>
             </div>
         </div>

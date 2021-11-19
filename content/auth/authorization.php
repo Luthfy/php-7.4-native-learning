@@ -18,3 +18,33 @@ if ($path[count($path) - 1] == 'login.php') {
     }
 }
 
+// restrict area
+$page = $_GET['page'];
+
+switch ($_SESSION['jenis_pengguna']) {
+    case 'admin':
+        $pages      = ['user', 'barang', 'ruang'];
+        $checking   = in_array($page, $pages);
+
+        if (!$checking) {
+            http_response_code(403);
+            die();
+        }
+        break;
+
+    case 'guru':
+        $pages      = ['barang', 'ruang'];
+        $checking   = in_array($page, $pages);
+
+        if (!$checking) {
+            http_response_code(403);
+            include('content/errors/my_403.php');
+            die();
+        }        
+        break;
+    
+    default:
+        # code...
+        break;
+}
+

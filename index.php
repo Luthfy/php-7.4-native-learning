@@ -95,7 +95,7 @@
           <img src="asset/img/user1-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Minarti</a>
+          <a href="#" class="d-block"><?= ucfirst($_SESSION['username']) ?? '' ?></a>
         </div>
       </div>
 
@@ -138,6 +138,8 @@
                     </p>
                 </a>
             </li>
+
+            <?php if ($_SESSION['jenis_pengguna'] == 'admin') : ?>
             <li class="nav-item">
                 <a href="index.php?page=user" class="nav-link">
                     <i class="nav-icon fas fa-users"></i>
@@ -146,27 +148,8 @@
                     </p>
                 </a>
             </li>
-            <!-- <li class="nav-item">
-                <a href="#" class="nav-link">
-                    <i class="nav-icon fas fa-cogs"></i>
-                    <p>
-                        Setting
-                        <i class="fas fa-angle-left right"></i>
-                    </p>
-                </a>
-                <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                        <a href="index.php?page=changepassword" class="nav-link">
-                            <p>Change Password</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="index.php?page=logout" class="nav-link">
-                            <p>Logout</p>
-                        </a>
-                    </li>
-                </ul>
-            </li> -->
+            <?php endif; ?>
+            
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
