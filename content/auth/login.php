@@ -13,9 +13,9 @@
         $_SESSION['is_login'] = true;
         $_SESSION['jenis_pengguna'] = $user['jenis_pengguna'];
         $_SESSION['username'] = $user['username'];
-        header("Location: http://".$_SERVER['HTTP_HOST']."/webproject/index.php");
+        header("Location: http://".$_SERVER['HTTP_HOST']."/webproject/index.php?page=dashboard");
     } else {
-        header("Location: http://".$_SERVER['HTTP_HOST']."/webproject/login.php");
+        header("Location: http://".$_SERVER['HTTP_HOST']."/webproject/login.php?page=dashboard");
     }
 
 
