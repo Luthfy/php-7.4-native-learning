@@ -19,9 +19,9 @@ if ($path[count($path) - 1] == 'login.php') {
 }
 
 // restrict area
-$page = $_GET['page'];
+$page = @$_GET['page'];
 
-switch ($_SESSION['jenis_pengguna']) {
+switch (@$_SESSION['jenis_pengguna']) {
     case 'admin':
         $pages      = ['user', 'barang', 'ruang'];
         $checking   = in_array($page, $pages);
