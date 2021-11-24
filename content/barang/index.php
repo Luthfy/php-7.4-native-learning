@@ -25,8 +25,10 @@
           <h3 class="card-title">Daftar Barang</h3> <!--Tambahkan daftar barang -->
             <div class="card-tools">
               <div class="btn btn-tool">
-                <a href="pdf/barang.php" class="btn btn-warning btn-sm mx-2">Cetak Daftar Barang</a> <!--Tambahkan href -->
-                <a href="index.php?page=barang&task=insert" class="btn btn-primary btn-sm mx-1">Tambah Barang</a> <!--Tambahkan href -->
+                <?php if ($_SESSION['jenis_pengguna'] == 'admin') : ?>
+                  <a href="pdf/barang.php" class="btn btn-warning btn-sm mx-2">Cetak Daftar Barang</a> <!--Tambahkan href -->
+                  <a href="index.php?page=barang&task=insert" class="btn btn-primary btn-sm mx-1">Tambah Barang</a> <!--Tambahkan href -->
+                <?php endif; ?>
               </div>
             </div>
         </div>

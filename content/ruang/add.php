@@ -22,7 +22,9 @@
     <!-- Default box -->
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Tambah Ruang</h3>
+            <?php if ($_SESSION['jenis_pengguna'] == 'admin') : ?>
+                <h3 class="card-title">Tambah Ruang</h3>
+            <?php endif; ?>
         </div>
         <div class="card-body">
             <form action="index.php?page=ruang&task=insertproses" method="post">
