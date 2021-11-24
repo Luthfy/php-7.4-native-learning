@@ -6,7 +6,7 @@ $path = explode("/", $_SERVER['REQUEST_URI']);
 
 if ($path[count($path) - 1] == 'login.php') {
     if (@$_SESSION['is_login']) {
-        header("location: http://".$_SERVER['HTTP_HOST']."/webproject/index.php");
+        header("location: http://".$_SERVER['HTTP_HOST']."/webproject/index.php?page=dashboard");
     }
 } else if ($path[count($path) - 1] == 'index.php') {
     if (@$_SESSION['is_login'] == false) {
@@ -21,9 +21,9 @@ if ($path[count($path) - 1] == 'login.php') {
 // restrict area
 $page = @$_GET['page'];
 
-switch (@$_SESSION['jenis_pengguna']) {
+switch (isset($_SESSION['jenis_pengguna'])) {
     case 'admin':
-        $pages      = ['user', 'barang', 'ruang'];
+        $pages      = ['user', 'barang', 'ruang', 'dashboard'];
         $checking   = in_array($page, $pages);
 
         if (!$checking) {
@@ -33,7 +33,7 @@ switch (@$_SESSION['jenis_pengguna']) {
         break;
 
     case 'guru':
-        $pages      = ['barang', 'ruang'];
+        $pages      = ['barang', 'ruang', 'dashboard'];
         $checking   = in_array($page, $pages);
 
         if (!$checking) {
