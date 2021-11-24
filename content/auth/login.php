@@ -15,7 +15,7 @@
         $_SESSION['username'] = $user['username'];
         header("Location: http://".$_SERVER['HTTP_HOST']."/webproject/index.php?page=dashboard");
     } else {
-        header("Location: http://".$_SERVER['HTTP_HOST']."/webproject/login.php?page=dashboard");
+        header("Location: http://".$_SERVER['HTTP_HOST']."/webproject/login.php");
     }
 
 
